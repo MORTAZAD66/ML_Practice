@@ -17,6 +17,7 @@ def plot_svc_decision_function(clf, ax=None):
     for i, xi in enumerate(x):
         for j, yj in enumerate(y):
             P[i, j] = clf.decision_function([[xi, yj]])
+    print(P)
     
     # plot the margins
     ax.contour(X, Y, P, colors='k', 
