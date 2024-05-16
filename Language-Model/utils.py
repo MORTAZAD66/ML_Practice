@@ -4,7 +4,7 @@ import torch
 from torch.autograd import Variable
 
 
-NLP = spacy.load('en')
+NLP = spacy.load('en_core_web_sm')
 
 
 def to_var(x, volatile=False):
