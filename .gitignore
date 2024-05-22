@@ -1,0 +1,11 @@
+# Ignore all .log files
+*.log
+
+# Ignore node_modules directory
+/home/ies/Desktop/ML_Practice/Image_Captioning/cocoapi/
+
+# Ignore specific file
+#path/to/your/file.txt
+
+# Ignore all files in a directory
+#path/to/your/directory/
