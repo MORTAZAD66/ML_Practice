@@ -40,6 +40,10 @@ class Vocabulary(object):
     def __len__(self):
         return len(self.word2idx)
     
+    def item(self):
+        # Return the word-to-index mapping
+        return self.word2idx.items()
+    
 
 def build_vocab(captions_filename, min_count=3):
     counter = Counter()
@@ -82,14 +86,3 @@ def main(args):
     print("Saved the vocabulary wrapper to '%s'" %vocab_path)
 
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--caption_path', type=str, 
-                        default='/home/ies/Desktop/ML_Practice/Persian_Image_Captioning/data/captions.text', 
-                        help='path for train annotation file')
-    parser.add_argument('--vocab_path', type=str, default='./data/vocab.pkl', 
-                        help='path for saving vocabulary wrapper')
-    parser.add_argument('--threshold', type=int, default=4, 
-                        help='minimum word count threshold')
-    args = parser.parse_args()
-    main(args)
